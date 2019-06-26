@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <h2>User details</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Job Title</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of EmployeeData?.Employees">
+        <td><a [routerLink]="['/home', user?.userId]" [queryParams]="{employeeCode: user.employeeCode}">{{user.firstName}}</a></td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.jobTitleName}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.emailAddress}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
