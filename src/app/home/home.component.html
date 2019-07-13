@@ -1,3 +1,8 @@
 <p>
   userID: {{userId}} -- Employee Code: {{employeeCode}}
 </p>
+<code> HREF - {{href}} <br>
+Current route - {{currentRoute}}</code>
+<br>
+<input [(ngModel)]="href">
+<input [ngModel]="currentRoute" (change)="change($event)">
